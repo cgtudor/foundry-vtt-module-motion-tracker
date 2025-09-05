@@ -1,10 +1,10 @@
 {
   "title": "Alien RPG - Motion Tracker",
   "description": "Allowing players to actually have a motion tracker visually in the game. The motion tracker is a tool that tracks moving objects. Here, we will show position of closest active and visible tokens filtered by some metrics as distance or even statuses.",
-  "version": "1.5.2",
+  "version": "1.6.0",
   "compatibility": {
-    "minimum": "11",
-    "verified": "12"
+    "minimum": "13",
+    "verified": "13"
   },
   "esmodules": [
     "scripts/motion_tracker.js"
@@ -40,8 +40,8 @@
       "url": "https://github.com/pplans/"
     }
   ],
-  "manifest": "https://raw.githubusercontent.com/pplans/foundry-vtt-module-motion-tracker/main/module.json",
-  "download": "https://github.com/pplans/foundry-vtt-module-motion-tracker/archive/refs/heads/main.zip",
+  "manifest": "https://raw.githubusercontent.com/cgtudor/foundry-vtt-module-motion-tracker/main/module.json",
+  "download": "https://github.com/cgtudor/foundry-vtt-module-motion-tracker/archive/refs/heads/main.zip",
   "license": "readme.md",
   "id": "motion_tracker",
   "relationships": {
