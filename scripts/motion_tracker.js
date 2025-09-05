@@ -17,16 +17,18 @@ Hooks.on("renderSceneControls", async (app, html, data) => {
 		const controlButtonIcon = `${settings.PATH}/textures/motion_tracker_ico.webp`;
 		const mtButtonHtml = await renderTemplate(`${settings.TEMPLATE_PATH}/menu_button.html`, {controlButtonIcon});
 		
-		const mainControls = html.find(".control-tools.main-controls");
+		// Convert html to jQuery if it's not already
+		const $html = html instanceof jQuery ? html : $(html);
+		const mainControls = $html.find(".control-tools.main-controls");
 
 		if (!mainControls?.length) return;
 
 		mainControls.append(mtButtonHtml);
-		const mtButton = html.find(".control-tools.main-controls li[data-control='motion-tracker']");
+		const mtButton = $html.find(".control-tools.main-controls li[data-control='motion-tracker']");
 		
 		mtButton
 			.on("click", event => {
-				const mtButton = html.find(".control-tools.main-controls li[data-control='motion-tracker']");
+				const mtButton = $html.find(".control-tools.main-controls li[data-control='motion-tracker']");
 
 				game.motion_tracker.openCloseListeners.push(function(_isOpen){
 					if(_isOpen)
